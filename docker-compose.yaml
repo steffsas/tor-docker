@@ -1,6 +1,6 @@
 services:
   tor:
-    image: ghcr.io/steffsas/tor-project:latest
+    image: ghcr.io/steffsas/tor-docker:latest
     ports:
       - "5050:443"
     volumes:
