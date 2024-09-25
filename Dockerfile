@@ -3,6 +3,8 @@
 # Base docker image
 FROM debian:stable-slim
 
+LABEL org.opencontainers.image.source = "https://github.com/steffsas/tor-docker" 
+
 # Set to 101 for backward compatibility
 ARG UID=101
 ARG GID=101
