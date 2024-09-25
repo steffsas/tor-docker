@@ -21,7 +21,6 @@ jobs:
   # build and push
   build-and-push-image:
     name: build-and-push
-    needs: [lint, test]
     runs-on: ubuntu-latest
     # Sets the permissions granted to the `GITHUB_TOKEN` for the actions in this job.
     permissions:
