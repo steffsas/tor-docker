@@ -1,0 +1,7 @@
+services:
+  tor:
+    image: ghcr.io/steffsas/tor-project:latest
+    ports:
+      - "5050:443"
+    volumes:
+      - ./torrc:/etc/tor/torrc
