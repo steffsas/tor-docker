@@ -2,6 +2,7 @@ services:
   tor:
     image: ghcr.io/steffsas/tor-docker:latest 
     container_name: "tor-relay"
+    restart: unless-stopped
     ports:
       - "5050:5050"
     networks:
