@@ -5,6 +5,8 @@
 [![Docker](https://img.shields.io/badge/docker-ready-blue?logo=docker&style=for-the-badge)](https://github.com/steffsas/tor-docker/pkgs/container/tor-docker)
 [![GitHub](https://img.shields.io/github/license/steffsas/tor-docker?style=for-the-badge)](LICENSE)
 
+<img src="icon/docker_tor_icon.png" alt="Docker Tor Icon" width="512"/>
+
 A lightweight, easily deployable **Tor relay** running inside Docker containers. This repository enables you to quickly spin up and maintain a Tor relay using Docker for privacy-enhanced web traffic routing on the Tor network.
 
 ## 📦 Features
