@@ -1,7 +1,17 @@
 services:
   tor:
-    image: ghcr.io/steffsas/tor-docker:latest
+    image: ghcr.io/steffsas/tor-docker:latest 
+    container_name: "tor-relay"
     ports:
-      - "5050:443"
+      - "5050:5050"
+    networks:
+      - "tor"
     volumes:
+      # signature keys
+      - ./keys:/var/lib/tor/.tor/keys/
+      # config file
       - ./torrc:/etc/tor/torrc
+networks:
+  tor:
+    enable_ipv6: true
+    driver: bridge

@@ -3,3 +3,5 @@ ContactInfo your@e-mail  # Write your e-mail and be aware it will be published
 ORPort      443          # You might use a different port, should you want to
 ExitRelay   0
 SocksPort   0
+# Address IPv4
+# Address [IPv6]
