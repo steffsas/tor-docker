@@ -40,7 +40,7 @@ nano torrc
 With Docker and Docker Compose installed, you can launch the Tor relay using:
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 This will start the Tor relay in detached mode, running in the background.
@@ -50,7 +50,7 @@ This will start the Tor relay in detached mode, running in the background.
 Monitor the Tor relay logs to ensure it’s running smoothly:
 
 ```bash
-docker-compose logs -f
+docker compose logs -f
 ```
 
 ### 5. Stop the Relay
@@ -58,7 +58,7 @@ docker-compose logs -f
 To stop the Tor relay, simply run:
 
 ```bash
-docker-compose down
+docker compose down
 ```
 
 ## 🛠️ Configuration
