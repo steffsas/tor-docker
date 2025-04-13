@@ -16,7 +16,10 @@
   "packageRules": [
     {
       "matchDatasources": ["deb"],
-      "matchPackageNames": ["tor"]
+      "matchPackageNames": ["tor"],
+      "registryUrls": [
+        "https://deb.debian.org/debian?suite=stable&components=main,contrib,non-free,stable-backports&binaryArch=amd64"
+      ]
     }
   ]
 }
