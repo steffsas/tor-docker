@@ -3,18 +3,21 @@
 # Base docker image
 FROM debian:bookworm-slim
 
-LABEL org.opencontainers.image.source "https://github.com/steffsas/tor-docker" 
+LABEL org.opencontainers.image.source="https://github.com/steffsas/tor-docker" 
 
 # Set to 101 for backward compatibility
 ARG UID=1010
 ARG GID=1010
+
+# renovate: suite=bookworm depName=tor
+ENV TOR_VERSION="0.4.7.16-1"
 
 RUN groupadd -g $GID debian-tor
 RUN useradd -m -u $UID -g $GID -s /bin/false -d /var/lib/tor debian-tor
 
 RUN printf "deb http://deb.debian.org/debian stable-backports main\n" >> /etc/apt/sources.list.d/backports.list
 RUN apt-get update && apt-get install -y \
-    tor \
+    tor="${TOR_VERSION}" \
     # backports allow us to install latest backport stable versions
     --no-install-recommends -t bookworm-backports
 
