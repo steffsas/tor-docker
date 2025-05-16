@@ -9,8 +9,8 @@ LABEL org.opencontainers.image.source="https://github.com/steffsas/tor-docker"
 ARG UID=1010
 ARG GID=1010
 
-# renovate: suite=bookworm depName=tor
-ENV TOR_VERSION="0.4.8.14-1~bpo12+1"
+# renovate: suite=bookworm-backports depName=tor
+ENV TOR_VERSION="0.4.7-11"
 
 RUN groupadd -g $GID debian-tor
 RUN useradd -m -u $UID -g $GID -s /bin/false -d /var/lib/tor debian-tor
